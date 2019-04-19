@@ -32,13 +32,13 @@ class FullCal extends Component {
         }}
         plugins={[ listPlugin, dayGridPlugin ]}
         events={[
-          { title: 'event 1', date: '2019-04-20', color: hci, textColor: black },
-          { title: 'event 2', date: '2019-04-22', color: capstone },
-          { title: 'event 3', start: '2019-04-23T15:55', color: hci, textColor: black },
-          { title: 'event 4', date: '2019-04-23', color: hci, textColor: black },
-          { title: 'event 5', date: '2019-04-23', color: ethics },
-          { title: 'event 6', date: '2019-04-26', color: hci, textColor: black },
-          { title: 'event 7', date: '2019-04-26', color: capstone }
+          { title: 'MATH 140 - Homework Due', date: '2019-04-20' },
+          { title: 'MATH 308 Exam', date: '2019-04-22' },
+          { title: 'CSCE 436 Demo', date: '2019-04-23' },
+          { title: 'CSCE 420 - Homework Due', date: '2019-04-23' },
+          { title: 'MATH 140 Quiz', date: '2019-04-23' },
+          { title: 'PHYS 108 Online Quiz', date: '2019-04-26' },
+          { title: 'CSCE 420 Assignment', date: '2019-04-26' },
         ]}
       />
     )
