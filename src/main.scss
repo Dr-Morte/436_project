@@ -78,3 +78,15 @@ li:hover {
 li:last-child {
   border: none;
 }
+
+.classheader {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
