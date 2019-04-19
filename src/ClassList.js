@@ -6,11 +6,11 @@ class ClassList extends Component {
   render() {
     return (
       <ul>
-        <li><ClassBox name="CSCE 420" /></li>
-        <li><ClassBox name="CSCE 436" /></li>
-        <li><ClassBox name="MATH 140" /></li>
-        <li><ClassBox name="MATH 308" /></li>
-        <li><ClassBox name="PHYS 108" /></li>
+        <li><ClassBox code="CSCE 420" name="Artificial Intelligence"/></li>
+        <li><ClassBox code="CSCE 436" name="Human Computer Interaction"/></li>
+        <li><ClassBox code="CSCE 482" name="Senior Capstone Design"/></li>
+        <li><ClassBox code="MATH 140" name="Mathematics for Business and Social Sciences"/></li>
+        <li><ClassBox code="MATH 308" name="Differential Equations"/></li>
       </ul>
     );
   }

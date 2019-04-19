@@ -3,7 +3,12 @@ import './main.scss'
 
 class ClassBox extends Component {
   render() {
-    return <a href="#">{this.props.name}</a>;
+    return (
+      <div>
+        <a href="#">{this.props.code}</a>
+        <span class="coursename">{this.props.name}</span>
+      </div>
+    );
   }
 }
 

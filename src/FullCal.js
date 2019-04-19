@@ -34,10 +34,10 @@ class FullCal extends Component {
         events={[
           { title: 'MATH 140 - Homework Due', date: '2019-04-20' },
           { title: 'MATH 308 Exam', date: '2019-04-22', color: diffeq },
-          { title: 'CSCE 436 Demo', date: '2019-04-23', color: hci },
+          { title: 'CSCE 436 Demo', date: '2019-04-23', color: hci, textColor: black },
           { title: 'CSCE 420 - Homework Due', date: '2019-04-23', color: ai },
           { title: 'MATH 140 Quiz', date: '2019-04-23' },
-          { title: 'PHYS 108 Online Quiz', date: '2019-04-26' },
+          { title: 'CSCE 482 Team Update', date: '2019-04-26' },
           { title: 'CSCE 420 Assignment', date: '2019-04-26', color: ai },
         ]}
       />
