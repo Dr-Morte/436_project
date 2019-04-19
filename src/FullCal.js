@@ -5,9 +5,9 @@ import listPlugin from '@fullcalendar/list'
 // import moment from 'moment'
 import './main.scss'
 
-const capstone = '#0000ff';
+const ai = '#0000ff';
 const hci = '#00ff00';
-const ethics = '#ff0000';
+const diffeq = '#ff0000';
 const black = '#000000';
 
 class FullCal extends Component {
@@ -33,12 +33,12 @@ class FullCal extends Component {
         plugins={[ listPlugin, dayGridPlugin ]}
         events={[
           { title: 'MATH 140 - Homework Due', date: '2019-04-20' },
-          { title: 'MATH 308 Exam', date: '2019-04-22' },
-          { title: 'CSCE 436 Demo', date: '2019-04-23' },
-          { title: 'CSCE 420 - Homework Due', date: '2019-04-23' },
+          { title: 'MATH 308 Exam', date: '2019-04-22', color: diffeq },
+          { title: 'CSCE 436 Demo', date: '2019-04-23', color: hci },
+          { title: 'CSCE 420 - Homework Due', date: '2019-04-23', color: ai },
           { title: 'MATH 140 Quiz', date: '2019-04-23' },
           { title: 'PHYS 108 Online Quiz', date: '2019-04-26' },
-          { title: 'CSCE 420 Assignment', date: '2019-04-26' },
+          { title: 'CSCE 420 Assignment', date: '2019-04-26', color: ai },
         ]}
       />
     )
