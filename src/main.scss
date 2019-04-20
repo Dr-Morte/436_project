@@ -1,6 +1,8 @@
 @import '~@fullcalendar/core/main.css';
 @import '~@fullcalendar/daygrid/main.css';
 @import '~@fullcalendar/list/main.css';
+@import "primer-core/index.scss";
+@import "primer-labels/index.scss";
 
 .header {
   background-color: #800000;
@@ -13,12 +15,12 @@
 
 .container {
   display: flex;
+  width: 100%;
   #classlist {
     width: 600px;
   }
   #fullcal {
     width: 100%;
-    height: 50%;
   }
 }
 
@@ -55,19 +57,19 @@ li {
     display: block;
     width: 400px;
 
-    -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
-    -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
-    -o-transition: font-size 0.3s ease, background-color 0.3s ease;
-    -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
-    transition: font-size 0.3s ease, background-color 0.3s ease;
-  }
-
-  a:hover {
-    font-size: 55px;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
   }
 
   .coursename {
     padding-left: 10px;
+  }
+
+  #badge {
+    margin-right: 10px;
   }
 }
 
