@@ -19,6 +19,14 @@ class ClassBox extends Component {
     this.setState({ showAlerts: toggle });
   }
 
+  renderAlerts = () => {
+    if (this.state.showAlerts && this.props.data.alerts.length > 0) {
+      return <Alerts alerts={this.props.data.alerts} code={this.props.data.code} removeAlert={this.removeAlert} />
+    } else {
+      return null
+    }
+  }
+
   render() {
     const data = this.props.data;
     var styles = {
@@ -39,7 +47,7 @@ class ClassBox extends Component {
 
         </div>
         <span className="coursename" onClick={this.toggleAlerts}>{data.name}</span>
-        { this.state.showAlerts && data.alerts.length > 0 ? <Alerts alerts={data.alerts} code={data.code} removeAlert={this.removeAlert} /> : null }
+        { this.renderAlerts() }
       </div>
     );
   }
