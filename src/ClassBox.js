@@ -1,22 +1,41 @@
 import React, { Component } from "react";
+import Alerts from './Alerts';
 import './main.scss';
 
 class ClassBox extends Component {
-  render() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showAlerts: false
+    }
+  }
 
+  toggleAlerts = () => {
+    let toggle = !this.state.showAlerts;
+    this.setState({ showAlerts: toggle });
+  }
+
+  render() {
+    const data = this.props.data;
     var styles = {
-      backgroundColor: this.props.color
+      backgroundColor: data.color
     };
 
     return (
-      <div className="hover-grow">
-        <div className="classheader">
+      <div className="classbox" onClick={this.toggleAlerts}>
+        <div className="classheader hover-grow">
           <span className="dot" style={styles}></span>
-          <a href="#">{this.props.code}</a>
-          <span title="Notifications" id="badge" className="State State--red">{this.props.events}</span>
+          <a href="#">{data.code}</a>
+          <span
+            title="Notifications"
+            id="badge"
+            className="State State--red">
+            {data.events}
+          </span>
 
         </div>
-        <span className="coursename">{this.props.name}</span>
+        <span className="coursename">{data.name}</span>
+        { this.state.showAlerts ? <Alerts /> : null }
       </div>
     );
   }
