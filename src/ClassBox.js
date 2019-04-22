@@ -10,6 +10,10 @@ class ClassBox extends Component {
     }
   }
 
+  removeAlert = (code, alert) => {
+    this.props.removeAlert.call(this, code, alert);
+  }
+
   toggleAlerts = () => {
     let toggle = !this.state.showAlerts;
     this.setState({ showAlerts: toggle });
@@ -22,20 +26,20 @@ class ClassBox extends Component {
     };
 
     return (
-      <div className="classbox" onClick={this.toggleAlerts}>
-        <div className="classheader hover-grow">
+      <div className="classbox">
+        <div className="class-header hover-grow" onClick={this.toggleAlerts}>
           <span className="dot" style={styles}></span>
-          <a href="#">{data.code}</a>
+          <a className="class-header-name" href="#">{data.code}</a>
           <span
             title="Notifications"
             id="badge"
             className="State State--red">
-            {data.events}
+            {data.alerts.length}
           </span>
 
         </div>
-        <span className="coursename">{data.name}</span>
-        { this.state.showAlerts ? <Alerts /> : null }
+        <span className="coursename" onClick={this.toggleAlerts}>{data.name}</span>
+        { this.state.showAlerts && data.alerts.length > 0 ? <Alerts alerts={data.alerts} code={data.code} removeAlert={this.removeAlert} /> : null }
       </div>
     );
   }

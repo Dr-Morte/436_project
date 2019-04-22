@@ -51,7 +51,7 @@ ul {
   border-bottom: 1px solid #ccc;
   text-align: left;
 
-  a {
+  .class-header-name {
     font: 200 50px/2 Helvetica, Verdana, sans-serif;
     padding-left: 10px;
     text-decoration: none;
@@ -90,7 +90,7 @@ ul {
   border: none;
 }
 
-.classheader {
+.class-header {
   padding-left: 10px;
   display: flex;
   align-items: center;

@@ -10,35 +10,50 @@ class ClassList extends Component {
         {
           code: "CSCE 420",
           name: "Artificial Intelligence",
-          events: "2",
-          color: "#0366d6"
+          color: "#0366d6",
+          alerts: ["New Announcement -- Class Cancelled", "New Grade -- Homework 3"]
         },
         {
           code: "CSCE 436",
           name: "Human Computer Interaction",
-          events: "1",
-          color: "#28a745"
+          color: "#28a745",
+          alerts: ["New Announcement -- Due Date Changed", "New Grade -- Test 2"]
         },
         {
           code: "CSCE 482",
           name: "Senior Capstone Design",
-          events: "1",
           color: "#6f42c1",
+          alerts: ["New Grade -- Individual Update Week 14", "New Announcement -- Final Presentation Schedule"]
         },
         {
           code: "MATH 140",
           name: "Mathematics for Business and Social Sciences",
-          events: "2",
-          color: "#ffd33d"
+          color: "#ffd33d",
+          alerts: []
         },
         {
           code: "MATH 308",
           name: "Differential Equations",
-          events: "1",
-          color: "#d73a49"
+          color: "#d73a49",
+          alerts: []
         }
       ]
     }
+  }
+
+  removeAlert = (code, alert) => {
+    var classes = this.state.classes;
+    var found = classes.find(function(element) {
+      return element["code"] === code;
+    });
+    var index = classes.indexOf(found);
+    found["alerts"].splice( found["alerts"].indexOf(alert), 1 );
+
+    if (index !== -1) {
+      classes[index] = found;
+    }
+    console.log(classes);
+    this.setState({classes: classes})
   }
 
   render() {
@@ -48,6 +63,7 @@ class ClassList extends Component {
           <ClassBox
             key={index}
             data={c}
+            removeAlert={this.removeAlert}
           />
         ))}
       </div>
