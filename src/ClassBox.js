@@ -19,6 +19,19 @@ class ClassBox extends Component {
     this.setState({ showAlerts: toggle });
   }
 
+  renderAlertBadge = () => {
+    if (this.props.data.alerts.length > 0) {
+      return <span
+              title="Notifications"
+              id="badge"
+              className="State State--red">
+              {this.props.data.alerts.length}
+            </span>
+    } else {
+      return null
+    }
+  }
+
   renderAlerts = () => {
     if (this.state.showAlerts && this.props.data.alerts.length > 0) {
       return <Alerts alerts={this.props.data.alerts} code={this.props.data.code} removeAlert={this.removeAlert} />
@@ -37,14 +50,8 @@ class ClassBox extends Component {
       <div className="classbox">
         <div className="class-header hover-grow" onClick={this.toggleAlerts}>
           <span className="dot" style={styles}></span>
-          <a className="class-header-name" href="#">{data.code}</a>
-          <span
-            title="Notifications"
-            id="badge"
-            className="State State--red">
-            {data.alerts.length}
-          </span>
-
+          <a className="class-header-name">{data.code}</a>
+          { this.renderAlertBadge() }
         </div>
         <span className="coursename" onClick={this.toggleAlerts}>{data.name}</span>
         { this.renderAlerts() }
