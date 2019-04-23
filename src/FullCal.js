@@ -8,20 +8,11 @@ import './main.scss'
 const ai = '#0366d6';
 const hci = '#28a745';
 const capstone = '#6f42c1';
-const businessMath ='#ffd33d';
+const ethics ='#ffd33d';
 const diffeq = '#d73a49';
 const black = '#000000';
 
 class FullCal extends Component {
-
-  // calendarRef = React.createRef()
-  //
-  // componentDidMount(){
-  //   console.log(this.calendarRef);
-  //   let calendarApi = this.calendarRef.current.getApi()
-  //   calendarApi.updateSize()
-  // }
-
   render() {
     return (
       <FullCalendar
@@ -34,13 +25,13 @@ class FullCal extends Component {
         }}
         plugins={[ listPlugin, dayGridPlugin ]}
         events={[
-          { title: 'MATH 140 - Homework Due', date: '2019-04-20', color: businessMath, textColor: black },
-          { title: 'MATH 308 Exam', date: '2019-04-22', color: diffeq },
-          { title: 'CSCE 436 Demo', date: '2019-04-23', color: hci },
-          { title: 'CSCE 420 - Homework Due', date: '2019-04-23', color: ai },
-          { title: 'MATH 140 Quiz', date: '2019-04-23', color: businessMath, textColor: black },
-          { title: 'CSCE 482 Team Update', date: '2019-04-26', color: capstone },
-          { title: 'CSCE 420 Assignment', date: '2019-04-26', color: ai },
+          { title: 'ENGR 482: Essay Revision 1 Due', date: '2019-04-22', color: ethics, textColor: black },
+          { title: 'MATH 308: Exam', date: '2019-04-22', color: diffeq },
+          { title: 'CSCE 436: Demo', date: '2019-04-23', color: hci },
+          { title: 'CSCE 420: Homework Due', date: '2019-04-23', color: ai },
+          { title: 'ENGR 482: Exam 3', date: '2019-04-63', color: ethics, textColor: black },
+          { title: 'CSCE 482: Team Update', date: '2019-04-26', color: capstone },
+          { title: 'CSCE 420: Assignment', date: '2019-04-26', color: ai },
         ]}
       />
     )

@@ -11,31 +11,48 @@ class ClassList extends Component {
           code: "CSCE 420",
           name: "Artificial Intelligence",
           color: "#0366d6",
-          alerts: ["New Announcement -- Class Cancelled", "New Grade -- Homework 3"]
+          alerts: [
+            "New Announcement: Class Cancelled",
+            "New Grade: Homework 3"
+          ]
         },
         {
           code: "CSCE 436",
           name: "Human Computer Interaction",
           color: "#28a745",
-          alerts: ["New Announcement -- Due Date Changed", "New Grade -- Test 2"]
+          alerts: [
+            "New Announcement: Due Date Changed",
+            "New Grade: Test 2"
+          ]
         },
         {
           code: "CSCE 482",
           name: "Senior Capstone Design",
           color: "#6f42c1",
-          alerts: ["New Grade -- Individual Update Week 14", "New Announcement -- Final Presentation Schedule"]
+          alerts: [
+            "New Grade: Individual Update Week 14",
+            "New Announcement: Final Presentation Schedule",
+            "New Announcement: Engineering Project Showcase"
+          ]
         },
         {
-          code: "MATH 140",
-          name: "Mathematics for Business and Social Sciences",
+          code: "ENGR 482",
+          name: "Ethics in Engineering",
           color: "#ffd33d",
-          alerts: []
+          alerts: [
+            "New Grade: Essay",
+            "New Announcement: Week 14 - International Engineering"
+          ]
         },
         {
           code: "MATH 308",
           name: "Differential Equations",
           color: "#d73a49",
-          alerts: []
+          alerts: [
+            "New Announcement: Homework 6 Posted",
+            "New Grade: Quiz 4",
+            "New Grade: Exam 2"
+          ]
         }
       ]
     }
