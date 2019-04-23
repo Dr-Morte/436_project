@@ -41,6 +41,14 @@ class ClassList extends Component {
     }
   }
 
+  getNotifications = (num) => {
+    var total = 0
+    this.state.classes.map( (c, index) => (
+      c.alerts.length > 0 ? total += c.alerts.length : total += 0
+    ))
+    this.props.getNotifications.call(this, total);
+  }
+
   removeAlert = (code, alert) => {
     var classes = this.state.classes;
     var found = classes.find(function(element) {
@@ -54,6 +62,11 @@ class ClassList extends Component {
     }
     console.log(classes);
     this.setState({classes: classes})
+    this.getNotifications();
+  }
+
+  componentDidMount() {
+    this.getNotifications();
   }
 
   render() {
